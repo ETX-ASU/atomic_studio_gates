@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atomic Studio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="simcapi.js"></script>
+    </head>
+
+    <body>
+        <!-- splitting up the html into two sections, the left hand side (selection_section) that always has a fixed width of 100px, and the main section (main_section) that holds the canvas and the controls -->
+
+        <!-- The div that holds the selector section -->
+        <div id="selector_section">
+            <!-- The atomic studio icon -->
+            <div id="icon_Section">
+                <img src="/images/atmoic-studio-logo.png" id="atom_Icon">
+            </div>
+            <!-- The div that holds the buttons for the objects -->
+            <div id="buttons">
+                <button type="button" id="object_1_button" class="selected">
+                    <div class="splatter_Imgs"><img id="splatter1"
+                            src="/images/object1.png">
+                    </div>
+                    <div class="button_text"><span>Object 1<span></div>
+                </button>
+                <button type="button" id="object_2_button">
+                    <div class="splatter_Imgs"><img id="splatter1"
+                            src="/images/object2.png">
+                    </div>
+                    <div class="button_text"><span>Object 2<span></div>
+                </button>
+                <button type="button" id="object_3_button">
+                    <div class="splatter_Imgs"><img id="splatter1"
+                            src="/images/object3.png">
+                    </div>
+                    <div class="button_text"><span>Object 3<span></div>
+                </button>
+                <button type="button" id="object_4_button">
+                    <div class="splatter_Imgs"><img id="splatter1"
+                            src="/images/object4.png">
+                    </div>
+                    <div class="button_text"><span>Object 4<span></div>
+                </button>
+                <button type="button" id="object_5_button">
+                    <div class="splatter_Imgs"><img id="splatter1"
+                            src="/images/object5.png">
+                    </div>
+                    <div class="button_text"><span>Object 5<span></div>
+                </button>
+
+            </div>
+        </div>
+
+        <!-- The div that holds the main section -->
+        <div id="main_section">
+            <!-- Splitting the main section into two parts. The first is the canvas, its full width, and takes up the majority of the screen. Then there is the controls section, this is along the bottom and has a height of 80px -->
+            <div id="canvas_section"><canvas id=atomic_canvas></canvas></div>
+
+            <!-- The div that holds the controls section -->
+            <div id="controls_section">
+
+                <!-- These are the main controls... centered with the little white rounded background... includes the object image and label, and the slider and labels -->
+                <div id="main_controls">
+                    <div id="object_img_name">
+                        <img id="splatter_mini"
+                            src="/images/object1.png">
+                        <span id="object_name">Obj 1</span>
+                    </div>
+                    <div id="slider_area">
+                        <span id="min_label">0</span>
+                        <div id="object_slider_div">
+                            <input type="range" id="object_slider" min="0" max="100" value="0">
+                        </div>
+                        <span id="max_label">100</span>
+                    </div>
+                </div>
+                <!-- The div that holds the number input that can control/output the slider -->
+                <div id="object_num_div">
+                    <input type="number" id="object_num" min="0" max="100" value="0">
+                </div>
+                <!-- The div that holds the total number of items on the canvas. This is just text that updates using JS -->
+                <div id="total_objects">
+                    <p><span id="total_objects_output">0</span>/100</p>
+
+                </div>
+            </div>
+            
+            <div class="popup"><span class="popuptext" id="myPopup">You have reached the maximum number of objects. Please remove some.</span></div>
+            <script src="atomicStudio.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,288 @@
+:root {
+    /* Colors: */
+    --light-grey: #e8e8e8;
+    --text-2-dark-grey: #696974;
+    --text-1-dark-grey: #373a44;
+    --blue-grey: #acbbc9;
+    --background-grey: #f3f5f8;
+    --navy: #222439;
+    --purple: #5b1eea;
+    --blue-ish: #006586;
+    --white: #ffffff;
+    --light-blue-ish: #3398b9;
+    --other-light-grey: #ebebeb;
+    --other-dark-grey: #333333;
+
+    /* Font/text values */
+    --font-family-open-sans: Open Sans;
+    --font-style-normal: normal;
+    --font-weight-bold: bold;
+    --font-weight-normal: normal;
+    --font-size-16: 16px;
+    --character-spacing-0: 0px;
+    --line-spacing-22: 22px;
+}
+
+/* Character Styles */
+.t1-primary-open-sans-bold {
+    font-family: var(--font-family-open-sans);
+    font-style: var(--font-style-normal);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-16);
+    line-height: var(--line-spacing-22);
+    letter-spacing: var(--character-spacing-0);
+    color: var(--text-1-dark-grey);
+}
+
+.open-sans-—-16pt {
+    font-family: var(--font-family-open-sans);
+    font-style: var(--font-style-normal);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-16);
+    line-height: var(--line-spacing-22);
+    letter-spacing: var(--character-spacing-0);
+    color: var(--other-dark-grey);
+}
+
+html,
+body {
+    min-width: 900px;
+}
+
+html {
+    height: 100vh;
+    font-family: var(--font-family-open-sans);
+    font-size: var(--font-size-20);
+}
+
+body {
+    margin: 0;
+}
+
+/*------------------------------
+    Selector Section Styles  
+------------------------------*/
+
+#selector_section {
+    background-color: #373a44;
+    width: 100px;
+    height: 100vh;
+}
+
+/* Icon Styles */
+#icon_Section {
+    background-color: #222439;
+}
+
+#atom_Icon {
+    width: 80px;
+    margin: 10px;
+}
+
+/* Button Styles -- or at least my attempt at styling them... */
+#buttons {
+    width: 80px;
+    padding: 5px;
+}
+
+button {
+    width: 80px;
+    background-color: #ffffff;
+    border-color: #5b1eea;
+    margin: 5px;
+    border-radius: 3px;
+    border-width: 1px;
+    font-size: 16px;
+    font-family: var(--font-family-open-sans);
+}
+
+.splatter_Imgs {
+    background-color: #f3f5f8;
+}
+
+button img {
+    width: 35px;
+}
+
+.button_text {
+    height: 23px;
+    text-align: center;
+    padding-top: 3px;
+}
+
+.selected {
+    border-radius: 0px 0px 3px 3px;
+    background-color: #5b1eea;
+    color: #ffffff;
+}
+
+/*-------------------------------------
+    Main Section and Canvas Styles  
+-------------------------------------*/
+
+#main_section {
+    position: fixed;
+    left: 100px;
+    top: 0px;
+    width: calc(100vw - 100px);
+    height: 100vh;
+    min-width: 800px;
+}
+
+#canvas_section {
+    height: calc(100vh - 80px);
+    background-color: white;
+}
+
+/*-------------------------------------
+    Controls Section Styles  
+-------------------------------------*/
+
+#controls_section {
+    height: 80px;
+    background-color: var(--background-grey);
+    position: fixed;
+    width: calc(100vw - 100px);
+    color: black;
+}
+
+#main_controls {
+    width: 458px;
+    height: 40px;
+    background: var(--white) 0% 0% no-repeat padding-box;
+    border-radius: 20px;
+    margin: 20px auto;
+}
+
+#object_img_name {
+    width: 100px;
+    text-align: center;
+    /*   margin: auto 0; */
+    border-right: 2px solid var(--background-grey);
+    display: flex;
+}
+
+
+#controls_section img {
+    width: 35px;
+    margin-top: 2.5px;
+    margin-left: 2px;
+}
+
+#controls_section span {
+    font-size: 16px;
+    height: 22px;
+    margin-top: 9px;
+    padding-left: 12px;
+}
+
+#slider_area {
+    margin: -35px 120px;
+    display: flex;
+
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 240px;
+    height: 10px;
+    border-radius: 5px;
+    background: lightgrey;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    /*     margin: 15px auto; */
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: var(--purple);
+}
+
+input[type=number] {
+    height: 40px;
+    width: 76px;
+    text-align: center;
+    background-color: var(--white);
+    border: 1px solid var(--blue-grey);
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+#object_num {
+    position: fixed;
+    bottom: 17px;
+    left: calc(100vw - (((100vw - 100px) - 458px) / 2) + 10px);
+}
+
+#total_objects {
+    position: fixed;
+    bottom: 12.75px;
+    left: calc(100vw - 70px);
+}
+
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: fixed;
+    z-index: 1;
+    bottom: 50%;
+    left: 50%;
+    /* margin-left: -80px; */
+  }
+  
+  /* Popup arrow
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  } */
+  
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    /* -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s; */
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+  .hidden {
+    display: none;
+  }

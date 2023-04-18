@@ -1,0 +1,43 @@
+CSS
+- Everything
+
+Functionality
+- Appear randomly @done
+- Other objects stay when you adjust objects @done
+- When you increase/decrease an object, previous ones don't change @done
+- Max of 100 @done
+- Not appear in a grid @done
+- functionality question... what should happen on window resize? Options:
+    - blank slate
+    - place them in the exact same positions (depending on resize up or down some might be on or off screen)
+    - try this one first--> scale everything down so they appear to be in the same place but they really aren't --> this might cause issues...
+    - place the same number of everything in new locations
+- 
+
+CAPI
+    Objects
+    - Number of objects --> Objects.Number --> number --> Default = 5 @done
+    - Name of objects --> Objects.Names --> string @done
+    -(I think we axed this) Selected object --> Objects.Selected --> Enum --> Default = Object1 @done
+    - If objects are visible --> Objects.Visible --> Boolean --> Default = True @done
+    - If objects are enabled --> Objects.Enabled --> Boolean --> Default = True @done
+    
+    Sliders
+    - Slider.Min --> number --> do we still want/need this? @done
+    - Slider.Max --> number --> do we still want/need this? @done
+    - Slider.Value --> number --> do we still want/need this? @done
+    - Slider.Visible --> Boolean --> Default = True
+    - Slider.Enabled --> Boolean --> Default = True
+
+    - Data.CorrectValues --> array[numbers] --> Default = N/A
+4 objects
+[15, 25, 10 50] => [3, 5, 2, 10] 
+
+    - Data.Tolerance --> number --> Default = 5%
+    - Data.Correct --> Boolean --> Default = False
+    - Data.Value.Object1 --> number --> Default = 0
+    - Data.Value.Object2 --> number --> Default = 0
+    - Data.Value.Object3 --> number --> Default = 0
+    - Data.Value.Object4 --> number --> Default = 0
+    - Data.Value.Object5 --> number --> Default = 0
+
