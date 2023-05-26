@@ -22,22 +22,51 @@ CAPI
     - If objects are visible --> Objects.Visible --> Boolean --> Default = True @done
     - If objects are enabled --> Objects.Enabled --> Boolean --> Default = True @done
     
-    Sliders
+    Controls
     - Slider.Min --> number --> do we still want/need this? @done
     - Slider.Max --> number --> do we still want/need this? @done
     - Slider.Value --> number --> do we still want/need this? @done
-    - Slider.Visible --> Boolean --> Default = True
-    - Slider.Enabled --> Boolean --> Default = True
+    - Controls.Visible --> Boolean --> Default = True @done
+    - Controls.Enabled --> Boolean --> Default = True @done
 
-    - Data.CorrectValues --> array[numbers] --> Default = N/A
-4 objects
-[15, 25, 10 50] => [3, 5, 2, 10] 
-
+    - Data.ExpectedValues --> array[numbers] --> Default = [20,20,20,20,20]
     - Data.Tolerance --> number --> Default = 5%
     - Data.Correct --> Boolean --> Default = False
-    - Data.Value.Object1 --> number --> Default = 0
-    - Data.Value.Object2 --> number --> Default = 0
-    - Data.Value.Object3 --> number --> Default = 0
-    - Data.Value.Object4 --> number --> Default = 0
-    - Data.Value.Object5 --> number --> Default = 0
+    - Data.Object1.Value --> number --> Default = 0
+    - Data.Object1.Percent --> number --> Default = 0
+    - Data.Object1.Correct --> Boolean --> Default = false
+    - Data.Object2.Value --> number --> Default = 0
+    - Data.Object2.Percent --> number --> Default = 0
+    - Data.Object2.Correct --> Boolean --> Default = false
+    - Data.Object3.Value --> number --> Default = 0
+    - Data.Object3.Percent --> number --> Default = 0
+    - Data.Object3.Correct --> Boolean --> Default = false
+    - Data.Object4.Value --> number --> Default = 0
+    - Data.Object4.Percent --> number --> Default = 0
+    - Data.Object4.Correct --> Boolean --> Default = false
+    - Data.Object5.Value --> number --> Default = 0
+    - Data.Object5.Percent --> number --> Default = 0
+    - Data.Object5.Correct --> Boolean --> Default = false
+    - 
 
+thinking through the correct values piece... I think it'll be something like:
+1. get the individual correct values [25,25,50,0,0]
+2. get the total number based on the correct values (i.e. adding them up)
+3. calculate the expected (correct) ratio/percent for each of these (i.e. dividing each one by the total)
+4. calculate the current ration for each object (i.e. object value / total objects)
+5. determine if the current ratio for each object is within 5% of the correct ratio.
+
+// Correct values and stuff
+let correct1;
+let correct2;
+let correct3;
+let correct4;
+let correct5;
+
+let correctTotal;
+
+let correctRatio1;
+let correctRatio2;
+let correctRatio3;
+let correctRatio4;
+let correctRatio5;

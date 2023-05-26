@@ -6,7 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Atomic Studio</title>
         <link rel="stylesheet" href="style.css">
+        <!-- JQuery CDN -->
+		<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
         <script src="simcapi.js"></script>
+        <script src="main.js"></script>
+        <!-- <script src="newAtomicStudioTest.js"></script> -->
     </head>
 
     <body>
@@ -16,39 +20,39 @@
         <div id="selector_section">
             <!-- The atomic studio icon -->
             <div id="icon_Section">
-                <img src="/images/atmoic-studio-logo.png" id="atom_Icon">
+                <img src="images/atmoic-studio-logo.png" id="atom_Icon" alt="symbol of an atom">
             </div>
             <!-- The div that holds the buttons for the objects -->
             <div id="buttons">
                 <button type="button" id="object_1_button" class="selected">
-                    <div class="splatter_Imgs"><img id="splatter1"
-                            src="/images/object1.png">
-                    </div>
-                    <div class="button_text"><span>Object 1<span></div>
+                    <span class="splatter_Imgs"><img class="shape01" id="splatter1" src="images/paint-shape_01.png"
+                            alt="splatter for object 1">
+                    </span>
+                    <span class="button_text"><span>Object 1</span></span>
                 </button>
                 <button type="button" id="object_2_button">
-                    <div class="splatter_Imgs"><img id="splatter1"
-                            src="/images/object2.png">
-                    </div>
-                    <div class="button_text"><span>Object 2<span></div>
+                    <span class="splatter_Imgs"><img id="splatter2" class="shape02" src="images/paint-shape_02.png"
+                            alt="splatter for object 2">
+                    </span>
+                    <span class="button_text"><span>Object 2</span></span>
                 </button>
-                <button type="button" id="object_3_button">
-                    <div class="splatter_Imgs"><img id="splatter1"
-                            src="/images/object3.png">
-                    </div>
-                    <div class="button_text"><span>Object 3<span></div>
+                <button type="button" id="object_3_button" class="hidden">
+                    <span class="splatter_Imgs"><img class="shape03" id="splatter3" src="images/paint-shape_03.png"
+                            alt="splatter for object 3">
+                    </span>
+                    <span class="button_text"><span>Object 3</span></span>
                 </button>
-                <button type="button" id="object_4_button">
-                    <div class="splatter_Imgs"><img id="splatter1"
-                            src="/images/object4.png">
-                    </div>
-                    <div class="button_text"><span>Object 4<span></div>
+                <button type="button" id="object_4_button" class="hidden">
+                    <span class="splatter_Imgs"><img class="shape04" id="splatter4" src="images/paint-shape_04.png"
+                            alt="splatter for object 4">
+                    </span>
+                    <span class="button_text"><span>Object 4</span></span>
                 </button>
-                <button type="button" id="object_5_button">
-                    <div class="splatter_Imgs"><img id="splatter1"
-                            src="/images/object5.png">
-                    </div>
-                    <div class="button_text"><span>Object 5<span></div>
+                <button type="button" id="object_5_button" class="hidden">
+                    <span class="splatter_Imgs"><img class="shape05" id="splatter5" src="images/paint-shape_05.png"
+                            alt="splatter for object 5">
+                    </span>
+                    <span class="button_text"><span>Object 5</span></span>
                 </button>
 
             </div>
@@ -65,8 +69,7 @@
                 <!-- These are the main controls... centered with the little white rounded background... includes the object image and label, and the slider and labels -->
                 <div id="main_controls">
                     <div id="object_img_name">
-                        <img id="splatter_mini"
-                            src="/images/object1.png">
+                        <img id="splatter_mini" class="shape01" src="images/paint-shape_01.png" alt="splatter for object 1">
                         <span id="object_name">Obj 1</span>
                     </div>
                     <div id="slider_area">
@@ -87,9 +90,11 @@
 
                 </div>
             </div>
-            
-            <div class="popup"><span class="popuptext" id="myPopup">You have reached the maximum number of objects. Please remove some.</span></div>
-            <script src="atomicStudio.js"></script>
+
+            <div class="popup"><span class="popuptext" id="myPopup">You have reached the maximum number of objects.
+                    Please remove some.</span></div>
+            <!-- <script src="newAtomicStudioTest.js"></script> -->
+        </div>
     </body>
 
 </html>
